@@ -1,0 +1,27 @@
+<div class="center">
+  <h2>Positions</h2>
+  <p class="lead">Here is some information about the positions available at our organization with a brief
+      description of the role as well as the base salary.</p>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="table-responsive">
+        <table class="table table-condensed table-hover">
+        <thead>
+            <th>Position</th>
+            <th>Title</th>
+            <th>Salary</th>
+        </thead>
+        <tbody>
+            <tr *ngFor='let p of positions'>
+                <td>{{p.PositionName}}</td>
+                <td>{{p.PositionDescription}}</td>
+                <td>${{p.PositionBaseSalary | number:'.2'}}</td>
+            </tr>
+        </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
